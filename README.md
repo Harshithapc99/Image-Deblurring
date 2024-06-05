@@ -33,7 +33,8 @@ Quantitative data for each method includes computation time, number of iteration
 GMRES: Best for high-quality deblurring but computationally expensive.
 Tikhonov: Good balance between quality and computational efficiency.
 TSVD: Consistent in improving deblurring quality with predictable performance.
-Conclusion
+
+# Conclusion
 GMRES: Suitable for high-quality deblurring where computational expense is not an issue.
 Tikhonov: Practical balance for general use, especially with limited computational resources.
 TSVD: Ideal for real-time applications with consistent performance.
