@@ -42,32 +42,4 @@ TSVD: Ideal for real-time applications with consistent performance.
 # Usage
 Clone the repository and run the provided MATLAB scripts to replicate the deblurring process and visualize the results.
 
-# matlab
-Copy code
-% Read and process the image
-orig_im = imread('tulip.jpeg');
-imshow(orig_im), title('Original Image');
-X = imrotate(orig_im, -90);
-H = rgb2gray(X);
-H = imresize(H, 0.25); % Resize for less memory usage
-H = im2double(H);
-imshow(H, []), title('Original Image');
-
-% Blurring the image
-v = [1/4 1/2 1/4];
-D = spdiags(repmat(v, size(H, 1), 1), -1:1, size(H, 1), size(H, 1));
-A = D^20;
-blur = @(Y) A*Y*A';
-G = blur(H);
-imshow(G, []), title('Blurred Image');
-
-% Apply deblurring methods
-method = 'GMRES'; % or 'Tikhonov' or 'TSVD'
-switch method
-    case 'GMRES'
-        % Add GMRES deblurring code here
-    case 'Tikhonov'
-        % Add Tikhonov deblurring code here
-    case 'TSVD'
-        % Add TSVD deblurring code here
-end
+<img width="1157" alt="Screenshot 2024-06-05 at 4 45 27 PM" src="https://github.com/Harshithapc99/Image-Deblurring/assets/171514388/27c58e84-c17f-4f07-9013-5bb053071ed6">
